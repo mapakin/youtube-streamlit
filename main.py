@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+from PIL import Image
 
 st.title('Streamlit おためし')
 
@@ -10,20 +11,16 @@ st.write('プログレスバーの表示')
 latest_iteration = st.empty()
 bar = st.progress(0)
 
-#df = pd.DataFrame(
-#    np.random.rand(100,2)/[50, 50] + [35.507395, 139.440881],
-#    columns=['lat','lon']
-#)
-
 for i in range(100):
     latest_iteration.text(f'Iteration{i+1}')
     bar.progress(i + 1)
    
-    time.sleep(0.2)
+    time.sleep(0.1)
 
 'Done!!!'
 
-
+image = Image.open('IMG_6314.PNG')
+st.image(image, caption='成功！！！')
 
 left_column, right_column = st.columns(2)
 button = left_column.button('右カラムに文字を表示')
@@ -54,8 +51,6 @@ expander3.write('問合せ内容を書く')
 #    img = Image.open('IMG_5102.JPG')
 #    img_rotate = img.rotate(-90)
 #    st.image(img_rotate, caption='staba', use_column_width=True)
-
-
 
 #df = pd.DataFrame(
 #    np.random.rand(100,2)/[50, 50] + [35.507395, 139.440881],
