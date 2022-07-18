@@ -10,10 +10,10 @@ st.write('プログレスバーの表示')
 latest_iteration = st.empty()
 bar = st.progress(0)
 
-df = pd.DataFrame(
-    np.random.rand(100,2)/[50, 50] + [35.507395, 139.440881],
-    columns=['lat','lon']
-)
+#df = pd.DataFrame(
+#    np.random.rand(100,2)/[50, 50] + [35.507395, 139.440881],
+#    columns=['lat','lon']
+#)
 
 for i in range(100):
     latest_iteration.text(f'Iteration{i+1}')
