@@ -1,10 +1,5 @@
-from enum import auto
 import streamlit as st
-import numpy as np
-import pandas as pd
-from PIL import Image
 import time
-import matplotlib.pyplot as plt
 
 st.title('Streamlit 超入門')
 
